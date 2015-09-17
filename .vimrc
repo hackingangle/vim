@@ -2,8 +2,6 @@
 filetype on
 " 加载不同语法高亮插件
 filetype plugin on
-" 开启行号
-set nu
 
 "" 常用快捷键操作
 " 定义快捷键前缀,<Leader>
@@ -47,3 +45,23 @@ set nocompatible
 " vim 自身命令行模式只能补全
 set wildmenu
 
+
+"" 插件管理工具
+" pathogen 自身置于独立目录中，指定路径
+runtime autoload/pathogen.vim
+" 运行 pathogen
+execute pathogen#infect()
+
+
+"" 添加辅助信息
+" 显示状态栏
+set laststatus=2
+" 高亮当前行|列
+set cursorline
+" set cursorcolumn
+" 开启行号
+set nu
+" 显示光标当前位置
+set ruler
+" 高亮当前搜索结果
+set hlsearch
