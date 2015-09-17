@@ -65,9 +65,68 @@ set nu
 set ruler
 " 高亮当前搜索结果
 set hlsearch
+" 禁止折行
+set nowrap
+" 字体，如何在linux下生效
+" set gfw=幼圆:h10:cGB2312
 
 "" 加载主题[theme]
-syntax enable
 set background=dark
 " set background=light
 colorscheme solarized
+
+"" 代码分析
+" 开启语法高亮功能
+syntax enable
+" 允许使用指定语法高亮配色方案替换默认方案
+syntax on
+
+"" 代码缩进
+""" 重要命令
+""" 1. retab，按照下列规则，重新处理tab和空格
+" 自适应不同语言的智能缩进
+filetype indent on
+" tab转为空格
+set expandtab
+" tab占空格数量,编辑时
+set tabstop=4
+" tab占空格数量,格式化时
+set shiftwidth=4
+" 连续数量空格视为一个tab
+set softtabstop=4
+"# 增强符号范围定位插件-indent-guides#
+let g:indent_guides_enable_on_vim_startup=1
+"# 从第二层开始可视化显示缩进
+let g:indent_guides_start_level=2
+"# 色块宽度
+let g:indent_guides_guide_size=1
+"# 快捷键 i 开/关缩进可视化
+nmap <silent> <Leader>i <Plug>IndentGuidesToggle
+
+"" 代码折叠
+" 基于缩进或语法进行代码折叠
+" set foldmethod=indent
+set foldmethod=syntax
+" 启动 vim 时关闭折叠代码
+set nofoldenable
+
+"" 接口快速切换插件，header和cpp之间
+" *.cpp 和 *.h 间切换
+nmap <Leader>ch :A<CR>
+" 子窗口中显示 *.cpp 或 *.h
+nmap <Leader>sch :AS<CR>
+
+
+"" 工程化管理NERDtree
+" 使用 NERDTree 插件查看工程文件。设置快捷键，速记：file list
+nmap <Leader>fl :NERDTreeToggle<CR>
+" 设置NERDTree子窗口宽度
+let NERDTreeWinSize=32
+" 设置NERDTree子窗口位置
+let NERDTreeWinPos="right"
+" 显示隐藏文件
+let NERDTreeShowHidden=1
+" NERDTree 子窗口中不显示冗余帮助信息
+let NERDTreeMinimalUI=1
+" 删除文件时自动删除文件对应 buffer
+let NERDTreeAutoDeleteBuffer=1
