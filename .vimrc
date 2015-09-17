@@ -3,6 +3,7 @@ filetype on
 " 加载不同语法高亮插件
 filetype plugin on
 " 开启行号
+set nu
 
 "" 常用快捷键操作
 " 定义快捷键前缀,<Leader>
