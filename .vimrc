@@ -65,3 +65,9 @@ set nu
 set ruler
 " 高亮当前搜索结果
 set hlsearch
+
+"" 加载主题[theme]
+syntax enable
+set background=dark
+" set background=light
+colorscheme solarized
