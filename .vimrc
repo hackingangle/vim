@@ -148,3 +148,6 @@ set fileencodings=ucs-bom,utf-8,chinese,cp936
 :nn <Leader>4 4gt
 :nn <Leader>5 5gt
 :nn <Leader>6 6gt
+" 快速打开tab页
+:nn <Leader>tn :tabnew<CR>
+:nn <Leader>tw :tabc<CR>
