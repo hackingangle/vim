@@ -136,3 +136,15 @@ set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,chinese,cp936
+
+ 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"  
+" NORMAL模式下TABS快速切换
+"  
+:nn <Leader>1 1gt
+:nn <Leader>2 2gt
+:nn <Leader>3 3gt
+:nn <Leader>4 4gt
+:nn <Leader>5 5gt
+:nn <Leader>6 6gt
