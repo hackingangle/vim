@@ -16,4 +16,4 @@ sh build.sh
 
 ### 效果图
 
-![IDE效果图](./assets/image/vim-ide1.png)
+![IDE效果图](/assets/image/vim-ide1.png)
