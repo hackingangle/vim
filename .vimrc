@@ -33,6 +33,21 @@ nnoremap <Leader>kw <C-W>k
 nnoremap <Leader>jw <C-W>j
 " 定义快捷键在结对符之间跳转，助记pair
 nmap <Leader>pa %
+" vimrc 编辑
+nmap <Leader>ev :tabedit $MYVIMRC<CR>
+" vimrc source
+nmap <Leader>build :so %<CR>
+" 清缓存
+nmap <Leader>bd :bd!<CR>
+" 取消高亮搜索结果
+nmap <Leader><space> :nohlsearch<cr>
+
+"------------------------Auto-Commands------------------------------"
+" 自动编译vimrc在每次保存的时候
+augroup autosourcing
+    autocmd!
+    autocmd BufWritePost .vimrc source %
+augroup END
 
 "" 搜索补全
 "" by hackingangle-可能被其他插件依赖
@@ -151,3 +166,9 @@ set fileencodings=ucs-bom,utf-8,chinese,cp936
 " 快速打开tab页
 :nn <Leader>tn :tabnew<CR>
 :nn <Leader>tw :tabc<CR>
+
+"""""backspace setting from the laracasts.com
+set backspace=indent,eol,start
+
+" mac-vim 独有linespace
+"set linespace=12
